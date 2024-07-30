@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Music&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lustria&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("/images/business.webp");
+  background-position: 5%;
+  background-attachment: fixed;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 5px black;
+  font-size: 1.5rem;
+  font-family: 'Lustria', serif;
+}
+@media screen and (min-width: 600px) {
+  body {
+    background-size: cover;
+  }
+}
+
+/* Navbar section */
+.navbar-container, #mobile-nav {
+  background-color: rgba(51, 51, 51, 0.8);
+  color: white;
+  position: fixed;
+  width: 100vw;
+  height: 50px;
+  z-index: 10;
+  font-size: 1rem;
+  padding-left: 10px;
+  padding-right: 100px;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 450px) {
+  .navbar-container {
+    display: none;
+  }
+}
+#mobile-nav {
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+}
+#mobile-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  padding: 0;
+  width: 100%;
+}
+@media screen and (min-width: 600px){
+  #mobile-nav{
+    display: none;
+  }
+}
+
+#logo-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 1.25rem;
+  line-height: .9;
+}
+#link-container {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-right: 20px;
+  padding: 0 10px;
+  gap: 10px;
+  width: 100%;
+  line-height: .9;
+}
+#link-container a {
+  font-weight: lighter;
+  text-decoration: none;
+}
+li a {
+  display: block;
+}
+#trebleset-logo {
+  width: 50px;
+}
+#treblesetLogo-container a:hover {
+  cursor: pointer;
+}
+a {
+  color: white;
+}
+/* HERO SECTION */
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.image-container {
+  position: relative;
+  background-image: url(/images/workspace.webp);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  margin-top: 0vh;
+  animation: scale 15s;
+  z-index: 0;
+}
+@keyframes scale {
+  0%{
+    transform: scale(1.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+
+}
+.overlay{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.mobile-hero {
+  top: 10%;
+  margin: auto;
+  z-index: 2;
+  position: absolute;
+}
+@media screen and (min-width: 400px) {
+  .mobile-hero { 
+    display: none;
+  }
+}
+
+.hero-text{
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  flex-direction: column;
+  top: 35%;
+  left: 10%;
+  color: #fff;
+  text-transform: uppercase;
+  z-index: 2;
+  position: absolute;
+  letter-spacing: 2.5px;
+}
+.firstWord {
+  color: #1987c7;
+}
+.resume-cta {
+  border: 2px solid #1987c7;
+  width: 175px;
+  padding: 5px 10px;
+  text-decoration: none;
+  text-align: center;
+}
+.resume-cta:hover {
+  background-color: rgba(100, 100, 100, 0.7);
+}
+
+
+/* end hero section */
+
+
+h1 {
+  font-size: 2rem;
+  /* !important; */
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+h4 {
+  font-size: 1rem;
+}
+@media screen and (min-width: 600px) {
+  h4 {
+    font-size: 2rem;
+  }
+}
+h3,
+h4,
+h6,
+p {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.divider {
+  background-color: white;
+  box-shadow: 1 1 1 #333;
+  width: 80px;
+  height: 2px;
+}
+
+.body-container {
+  height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 5px;
+}
+header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+/* .mountains {
+  transform: translateZ(-5px) scale(2);
+}
+
+.trees {
+  transform: translateZ(-2.5px) scale(1.5);
+}
+.mountains,
+.trees {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+@media screen and (min-width: 600px) {
+  .mountains {
+    height: 75%;
+  }
+} */
+
+.title-container {
+  text-align: center;
+}
+
+/* Portfolio Section */
+.icon-containers {
+  width: 150px;
+  height: 150px;
+  transition: 1.5s ease;
+  color: #333;
+  text-shadow: none !important;
+}
+.icon-containers:hover {
+  /* transform: scale(1.25);
+  transition: 1.5s ease; */
+  box-shadow: -7px 2px 7px rgba(0, 0, 0, 0.5);
+  color: black;
+}
+#contact,
+.project-card {
+  margin: auto;
+  box-shadow: -7px 2px 7px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  background-color: #FFF;
+  color: #333;
+  text-shadow: none;
+  padding: 20px;
+}
+
+.project-card {
+  width: 250px;
+  /* height: 450px; */
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 35px;
+  font-size: 1rem;
+  overflow: hidden;
+}
+@media screen and (min-width: 600px) {
+  .project-card {
+    height: 500px;
+    margin: 10px;
+  }
+}
+.project-card h4, h6 {
+  color: #333;
+  margin: 0;
+}
+a.deployed-link{
+  color: #1987c7;
+}
+a.deployed-link:hover{
+  color: #333;
+}
+.github-link {
+  color: #1987c7;
+}
+.github-link:hover {
+  color: #333;
+}
+#portfolio {
+  margin: auto;
+  width: 100vw;
+  padding-bottom: 15px;
+}
+@media screen and (min-width: 600px) {
+  #portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+.cardImg-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: 1s ease;
+  position: relative;
+  align-items: center;
+}
+
+.cardImg-container::before {
+  content: "";
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: ease 1.5s;
+}
+.cardImg-container:hover::before{
+  opacity: 1;
+  transition: ease 1.5s;
+}
+
+#cardImg-container1 {
+  background-image: url("/images/millworksScreenshot.jpg");
+  background-size: cover;
+}
+#cardImg-container2 {
+  background-image: url("/images/issScreenshot.jpg");
+  background-size: cover;
+}
+#cardImg-container3 {
+  background-image: url("/images/weatherAppImg.png");
+  background-size: cover;
+}
+#cardImg-container4 {
+  background-image: url("/images/modalScreenshot.jpg");
+  background-size: cover;
+}
+#cardImg-container5 {
+  background-image: url("/images/mock-restaurant-screenshot1.png");
+  background-size: cover;
+}
+#cardImg-container6 {
+  background-image: url("/images/favoriteFlixImg.png");
+  background-size: cover;
+}
+
+#platypusIcon {
+  border-radius: 10px;
+}
+.portImg {
+  width: 150px;
+  height: auto;
+}
+
+.skill-icon,
+.contact-icon,
+.project-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* end */
+/* Skills Section */
+#skills,
+.skills-container-one,
+.skills-container-two,
+#contact {
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.skills-container-one {
+  width: 100%;
+  margin-top: 30px;
+  height: 450px;
+  gap: 20px;
+  font-size: 1.2rem;
+}
+.skills-container-two {
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  height: 450px;
+  gap: 20px;
+  padding: 0;
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 600px) {
+  .skills-container-one {
+    height: 300px;
+  }
+  .skills-container-two {
+    height: 300px !important;
+  }
+}
+/* end */
+/* About Section */
+#about {
+  font-size: 1rem;
+  padding: 2rem;
+  background-color: #1987c7;
+  color: white;
+}
+/* end */
+/* Contact Section */
+#contact {
+  width: 250px;
+  height: 450px;
+}
+.contact-containers {
+  width: 60px;
+  height: 60px;
+}
+#github-icon {
+  width: 75%;
+}
+#card-container {
+  display: flex;
+  justify-content: space-around;
+}
+#profile {
+  width: 125px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+#resumeBtn {
+  border-radius: 10px;
+  padding: 50;
+  margin: 50;
+  font-size: 24px;
+  text-decoration: none;
+  text-align: center;
+  background-color: white;
+  color: black;
+  border: 2.5px solid gray;
+}
+#resumeBtn a {
+  color: black;
+}
+
+#footer {
+  font-size: 1rem;
+}
